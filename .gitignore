@@ -66,6 +66,7 @@ ehthumbs.db
 *.log
 *.sql
 *.sqlite
+*.sqlite3
 
 # Unit test / coverage reports
 htmlcov/
