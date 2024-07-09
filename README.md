@@ -30,7 +30,7 @@ This project is a piano practice recording system that receives MIDI signals fro
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/yourusername/piano-practice-recording-system.git
+    git clone https://github.com/anmo-fish/iriya-piano-practice.git
     cd piano-practice-recording-system
     ```
 
@@ -48,10 +48,6 @@ This project is a piano practice recording system that receives MIDI signals fro
     MIDI_DEVICE = "your device name"
     ```
 
-### Usage
-Access `http://localhost:8050` in your browser.
-To access from another device, replace `localhost` with the local IP address of the console running the application.
-
 ### Start Development Environment
 ```bash
 python run_dev.py
@@ -62,6 +58,10 @@ Run the following command in the root directory of the project:
 ```
 gunicorn src.app:server -b 0.0.0.0:8050
 ```
+
+### Usage
+Access `http://localhost:8050` in your browser.
+To access from another device, replace `localhost` with the local IP address of the console running the application.
 
 ## 日本語
 
@@ -86,7 +86,7 @@ gunicorn src.app:server -b 0.0.0.0:8050
 
 1. リポジトリをクローンする:
     ```bash
-    git clone https://github.com/yourusername/piano-practice-recording-system.git
+    git clone https://github.com/anmo-fish/iriya-piano-practice.git
     cd piano-practice-recording-system
     ```
 
@@ -104,11 +104,6 @@ gunicorn src.app:server -b 0.0.0.0:8050
     MIDI_DEVICE = "your device name"
     ```
 
-### 使い方
-ブラウザで `http://localhost:8050` にアクセスします。
-別のデバイスからアクセスするにはlocalhostの部分を実行しているコンソールのローカルipアドレスにしてください。
-
-
 ### 開発環境の起動
 ```bash
 python run_dev.py
@@ -118,6 +113,10 @@ python run_dev.py
 ```
 gunicorn src.app:server -b 0.0.0.0:8050
 ```
+
+### 使い方
+ブラウザで `http://localhost:8050` にアクセスします。
+別のデバイスからアクセスするにはlocalhostの部分を実行しているコンソールのローカルipアドレスにしてください。
 
 # Lisence
 
