@@ -7,6 +7,27 @@ import logging
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DB_PATH = os.path.join(BASE_DIR, "db.sqlite3")
 
+
+# Function to create the database file if it does not exist
+def create_database():
+    if not os.path.exists(DB_PATH):
+        with sqlite3.connect(DB_PATH) as conn:
+            c = conn.cursor()
+            # Example of table creation (modify as needed)
+            c.execute(
+                """
+                CREATE TABLE performances (
+                    id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    start_time TEXT NOT NULL,
+                    end_time TEXT NOT NULL,
+                    duration INTEGER NOT NULL
+                )
+            """
+            )
+            conn.commit()
+        print(f"Database created at {DB_PATH}")
+
+
 print(f"Database path: {DB_PATH}")  # デバッグ情報
 
 conn = sqlite3.connect(DB_PATH, check_same_thread=False)
